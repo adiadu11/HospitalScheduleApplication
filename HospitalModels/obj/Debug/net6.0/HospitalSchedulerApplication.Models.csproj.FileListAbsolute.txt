@@ -1,0 +1,12 @@
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalModels\bin\Debug\net6.0\HospitalSchedulerApplication.Models.deps.json
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalModels\bin\Debug\net6.0\HospitalSchedulerApplication.Models.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalModels\bin\Debug\net6.0\HospitalSchedulerApplication.Models.pdb
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalModels\obj\Debug\net6.0\HospitalSchedulerApplication.Models.csproj.AssemblyReference.cache
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalModels\obj\Debug\net6.0\HospitalSchedulerApplication.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalModels\obj\Debug\net6.0\HospitalSchedulerApplication.Models.AssemblyInfoInputs.cache
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalModels\obj\Debug\net6.0\HospitalSchedulerApplication.Models.AssemblyInfo.cs
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalModels\obj\Debug\net6.0\HospitalSchedulerApplication.Models.csproj.CoreCompileInputs.cache
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalModels\obj\Debug\net6.0\HospitalSchedulerApplication.Models.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalModels\obj\Debug\net6.0\refint\HospitalSchedulerApplication.Models.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalModels\obj\Debug\net6.0\HospitalSchedulerApplication.Models.pdb
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalModels\obj\Debug\net6.0\ref\HospitalSchedulerApplication.Models.dll

@@ -1,4 +1,5 @@
 ﻿using HospitalModels.Models;
+using HospitalSchedulerApplication.Abstract.DataAccessInterfaces;
 using HospitalSchedulerApplication.Abstract.ServiceInterfaces;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,23 @@ namespace HospitalSchedulerApplication.Business.Services
 {
     public class ScheduleService : IScheduleService
     {
+        private readonly IScheduleRepository _scheduleRepo;
+        public ScheduleService(IScheduleRepository scheduleRepo)
+        {
+            _scheduleRepo = scheduleRepo;
+        }
         public Schedule AddSchedule(Schedule schedule)
+        {
+            if(_scheduleRepo.AddSchedule(schedule))
+            {
+                //ToDo: Return the inserted schedule row with correct
+                //schedule ID instead of the request model received.
+                return schedule;
+            }
+            return null;
+        }
+
+        public List<Schedule> GetAllSchedules()
         {
             throw new NotImplementedException();
         }
@@ -20,7 +37,7 @@ namespace HospitalSchedulerApplication.Business.Services
             throw new NotImplementedException();
         }
 
-        public bool RemoveSchedule(int id)
+        public int RemoveSchedule(int id)
         {
             throw new NotImplementedException();
         }

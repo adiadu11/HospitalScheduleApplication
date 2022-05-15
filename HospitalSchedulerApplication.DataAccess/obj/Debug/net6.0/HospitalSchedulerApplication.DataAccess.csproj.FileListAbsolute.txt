@@ -1,0 +1,17 @@
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\bin\Debug\net6.0\HospitalSchedulerApplication.DataAccess.deps.json
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\bin\Debug\net6.0\HospitalSchedulerApplication.DataAccess.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\bin\Debug\net6.0\HospitalSchedulerApplication.DataAccess.pdb
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\bin\Debug\net6.0\HospitalSchedulerApplication.Abstract.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\bin\Debug\net6.0\HospitalSchedulerApplication.Models.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\bin\Debug\net6.0\HospitalSchedulerApplication.Abstract.pdb
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\bin\Debug\net6.0\HospitalSchedulerApplication.Models.pdb
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\obj\Debug\net6.0\HospitalSchedulerApplication.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\obj\Debug\net6.0\HospitalSchedulerApplication.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\obj\Debug\net6.0\HospitalSchedulerApplication.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\obj\Debug\net6.0\HospitalSchedulerApplication.DataAccess.AssemblyInfo.cs
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\obj\Debug\net6.0\HospitalSchedulerApplication.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\obj\Debug\net6.0\HospitalSchedulerApplication.DataAccess.csproj.CopyComplete
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\obj\Debug\net6.0\HospitalSchedulerApplication.DataAccess.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\obj\Debug\net6.0\refint\HospitalSchedulerApplication.DataAccess.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\obj\Debug\net6.0\HospitalSchedulerApplication.DataAccess.pdb
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.DataAccess\obj\Debug\net6.0\ref\HospitalSchedulerApplication.DataAccess.dll

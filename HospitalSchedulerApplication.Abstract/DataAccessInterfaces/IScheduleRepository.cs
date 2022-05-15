@@ -9,7 +9,7 @@ namespace HospitalSchedulerApplication.Abstract.DataAccessInterfaces
 {
     public interface IScheduleRepository
     {
-        Schedule AddSchedule(Schedule schedule);
+        bool AddSchedule(Schedule schedule);
         bool RemoveSchedule(int id);
         Schedule UpdateSchedule(Schedule schedule);
         Schedule GetSchedule(int id);

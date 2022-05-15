@@ -8,11 +8,28 @@ using System.Threading.Tasks;
 
 namespace HospitalSchedulerApplication.DataAccess.Repositories
 {
-    internal class ScheduleRepo : IScheduleRepository
+    public class ScheduleRepo : IScheduleRepository
     {
-        public Schedule AddSchedule(Schedule schedule)
+        private readonly IDBCrudRepo _dBCrudRepo;
+        public ScheduleRepo(IDBCrudRepo dBCrudRepo)
         {
-            throw new NotImplementedException();
+            _dBCrudRepo = dBCrudRepo;
+        }
+        public bool AddSchedule(Schedule schedule)
+        {
+            try
+            {
+                //This is my connection string i have assigned the database file address path
+                
+                //This is my insert query in which i am taking input from the user through windows forms
+                string query = "insert into schedule (dutyName, employeeName, dateOfDuty) values('" + schedule.DutyName + "','" + schedule.EmployeeName + "','" + schedule.DateOfDuty.ToString("yyyy-MM-dd") + "');";
+                //This is  MySqlConnection here i have created the object and pass my connection string.
+                return _dBCrudRepo.ExecuteQuery(query) > 0;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
         public Schedule GetSchedule(int id)

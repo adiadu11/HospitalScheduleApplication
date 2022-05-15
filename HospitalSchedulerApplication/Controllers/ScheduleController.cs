@@ -1,4 +1,5 @@
 ﻿using HospitalModels.Models;
+using HospitalSchedulerApplication.Abstract.ServiceInterfaces;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,36 +10,44 @@ namespace HospitalSchedulerApplication.Controllers
     [ApiController]
     public class ScheduleController : ControllerBase
     {
+        private readonly IScheduleService _scheduleService;
+        public ScheduleController(IScheduleService scheduleService)
+        {
+            _scheduleService = scheduleService;
+        }
         // GET: api/<ScheduleController>
         [HttpGet]
-        public Schedule Get()
+        public List<Schedule> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _scheduleService.GetAllSchedules();
         }
 
         // GET api/<ScheduleController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Schedule Get(int id)
         {
-            return "value";
+            return _scheduleService.GetSchedule(id);
         }
 
         // POST api/<ScheduleController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public Schedule Post([FromBody] Schedule schedule)
         {
+            return _scheduleService.AddSchedule(schedule);
         }
 
         // PUT api/<ScheduleController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public Schedule Put(int id, [FromBody] Schedule schedule)
         {
+            return _scheduleService.UpdateSchedule(schedule);
         }
 
         // DELETE api/<ScheduleController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public int Delete(int id)
         {
+            return _scheduleService.RemoveSchedule(id);
         }
     }
 }

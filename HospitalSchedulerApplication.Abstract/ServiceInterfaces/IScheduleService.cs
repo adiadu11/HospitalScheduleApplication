@@ -10,8 +10,9 @@ namespace HospitalSchedulerApplication.Abstract.ServiceInterfaces
     public interface IScheduleService
     {
         Schedule AddSchedule(Schedule schedule);
-        bool RemoveSchedule(int id);
+        int RemoveSchedule(int id);
         Schedule UpdateSchedule(Schedule schedule);
         Schedule GetSchedule(int id);
+        List<Schedule> GetAllSchedules();
     }
 }
