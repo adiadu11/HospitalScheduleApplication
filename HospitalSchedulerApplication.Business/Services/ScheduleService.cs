@@ -29,7 +29,7 @@ namespace HospitalSchedulerApplication.Business.Services
 
         public List<Schedule> GetAllSchedules()
         {
-            throw new NotImplementedException();
+            return _scheduleRepo.GetAllSchedules();
         }
 
         public Schedule GetSchedule(int id)

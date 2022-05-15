@@ -13,5 +13,6 @@ namespace HospitalSchedulerApplication.Abstract.DataAccessInterfaces
         bool RemoveSchedule(int id);
         Schedule UpdateSchedule(Schedule schedule);
         Schedule GetSchedule(int id);
+        List<Schedule> GetAllSchedules();
     }
 }

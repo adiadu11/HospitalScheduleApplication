@@ -14,6 +14,7 @@ namespace HospitalSchedulerApplication.DataAccess
         private readonly string _connectionString;
         public MySqlCrudRepo()
         {
+            //ToDo: Read this from configuration.
             _connectionString = "datasource=localhost;port=3306;username=root;password=PASS;database=hospital;";
         }
         public int ExecuteQuery(string query)
@@ -34,7 +35,6 @@ namespace HospitalSchedulerApplication.DataAccess
             DataTable table = new DataTable();
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
-                //This is command class which will handle the query and connection object.
                 MySqlCommand command = new MySqlCommand(query, connection);
 
                 connection.Open();
@@ -44,13 +44,12 @@ namespace HospitalSchedulerApplication.DataAccess
                 }
                 using (MySqlDataReader reader = command.ExecuteReader())
                 {
-                    // Here our query will be executed and data saved into the database.
                     while (reader.Read())
                     {
                         DataRow row = table.NewRow();
                         for (int i = 0; i < fields.Length; i++)
                         {
-                            row[fields[i]] = (string)reader[fields[i]];
+                            row[fields[i]] = reader[fields[i]].ToString();
                         }
                         table.Rows.Add(row);
                     }
