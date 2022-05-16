@@ -76,10 +76,22 @@ namespace HospitalSchedulerApplication.Controllers
 
         // PUT api/<ScheduleController>/5
         [HttpPut("{id}")]
-        public async Task<Schedule> Put(int id, [FromBody] Schedule schedule)
+        public async Task<IActionResult> Put(int id, [FromBody] Schedule schedule)
         {
-            //Not Implemented.
-            throw new NotImplementedException();
+            if (id < 0)
+            {
+                return BadRequest("Id cannot be less than 0.");
+            }
+            //ToDo: Validate the id first, return bad request/not found if Id doesn't exist.
+
+            //ToDo: Instead of adding the stopwatch code at every endpoint, add an
+            //MVC filter and add the stopwatch code there along with exception handling.
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+            int recordsUpdated = await _scheduleService.UpdateSchedule(id, schedule);
+            watch.Stop();
+            schedule.TimeTaken = watch.ElapsedMilliseconds;
+            return Ok(schedule);
         }
 
         // DELETE api/<ScheduleController>/5

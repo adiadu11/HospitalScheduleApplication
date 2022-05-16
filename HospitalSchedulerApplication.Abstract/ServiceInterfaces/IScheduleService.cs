@@ -12,7 +12,7 @@ namespace HospitalSchedulerApplication.Abstract.ServiceInterfaces
         Task<Schedule> AddSchedule(Schedule schedule);
         Task<int> RemoveSchedule(int id);
         Task<int> RemoveSchedule(DateTime date);
-        Task<Schedule> UpdateSchedule(Schedule schedule);
+        Task<int> UpdateSchedule(int id, Schedule schedule);
         Task<Schedule> GetSchedule(int id);
         Task<ScheduleList> GetAllSchedules();
     }

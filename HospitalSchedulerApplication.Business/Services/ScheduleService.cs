@@ -51,9 +51,9 @@ namespace HospitalSchedulerApplication.Business.Services
             return await _scheduleRepo.RemoveSchedule(date);
         }
 
-        public Task<Schedule> UpdateSchedule(Schedule schedule)
+        public async Task<int> UpdateSchedule(int id, Schedule schedule)
         {
-            throw new NotImplementedException();
+            return await _scheduleRepo.UpdateSchedule(id, schedule);
         }
     }
 }

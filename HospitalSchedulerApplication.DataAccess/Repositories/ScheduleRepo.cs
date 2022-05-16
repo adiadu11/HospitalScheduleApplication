@@ -87,9 +87,18 @@ namespace HospitalSchedulerApplication.DataAccess.Repositories
             }
         }
 
-        public Task<Schedule> UpdateSchedule(Schedule schedule)
+        public async Task<int> UpdateSchedule(int id, Schedule schedule)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string query = $"update schedule set employeeName='{schedule.EmployeeName}', dutyName='{schedule.DutyName}', " +
+                    $"dateOfDuty = '{schedule.DateOfDuty.ToString("yyyy-MM-dd")}' where scheduleId={id};";
+                return await _dBCrudRepo.ExecuteQuery(query);
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
         }
 
         private List<Schedule> GetListFromDataTable(DataTable table)
