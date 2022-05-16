@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HospitalModels.Models
+namespace HospitalSchedulerApplication.Models.Models
 {
     public class Schedule
     {
@@ -16,6 +16,9 @@ namespace HospitalModels.Models
         //public int EmployeeId { get; set; }
         public string EmployeeName { get; set; }
         public DateTime DateOfDuty { get; set; }
+
+        //ToDo: Ideally, this should be in logs. Remove this property when logs are added.
+        public long TimeTaken { get; set; }
 
         //ToDo: Add these fields later.
         //public TimeOnly DutyStartTime { get; set; }

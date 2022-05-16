@@ -1,6 +1,6 @@
-﻿using HospitalModels.Models;
-using HospitalSchedulerApplication.Abstract.DataAccessInterfaces;
+﻿using HospitalSchedulerApplication.Abstract.DataAccessInterfaces;
 using HospitalSchedulerApplication.Abstract.ServiceInterfaces;
+using HospitalSchedulerApplication.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,10 +24,10 @@ namespace HospitalSchedulerApplication.Business.Services
                 //schedule ID instead of the request model received.
                 return schedule;
             }
-            return null;
+            return new Schedule() { ScheduleId = -1};
         }
 
-        public List<Schedule> GetAllSchedules()
+        public ScheduleList GetAllSchedules()
         {
             return _scheduleRepo.GetAllSchedules();
         }

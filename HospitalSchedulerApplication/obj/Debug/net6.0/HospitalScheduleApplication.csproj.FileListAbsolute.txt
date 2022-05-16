@@ -52,3 +52,7 @@ C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplicat
 C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication\bin\Debug\net6.0\HospitalSchedulerApplication.DataAccess.dll
 C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication\bin\Debug\net6.0\HospitalSchedulerApplication.Business.pdb
 C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication\bin\Debug\net6.0\HospitalSchedulerApplication.DataAccess.pdb
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

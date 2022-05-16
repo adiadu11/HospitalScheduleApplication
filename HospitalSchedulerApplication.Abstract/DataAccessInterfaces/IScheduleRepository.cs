@@ -1,4 +1,4 @@
-﻿using HospitalModels.Models;
+﻿using HospitalSchedulerApplication.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +13,6 @@ namespace HospitalSchedulerApplication.Abstract.DataAccessInterfaces
         bool RemoveSchedule(int id);
         Schedule UpdateSchedule(Schedule schedule);
         Schedule GetSchedule(int id);
-        List<Schedule> GetAllSchedules();
+        ScheduleList GetAllSchedules();
     }
 }

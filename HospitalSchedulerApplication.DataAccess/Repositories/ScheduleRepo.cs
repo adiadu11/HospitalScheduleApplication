@@ -1,5 +1,5 @@
-﻿using HospitalModels.Models;
-using HospitalSchedulerApplication.Abstract.DataAccessInterfaces;
+﻿using HospitalSchedulerApplication.Abstract.DataAccessInterfaces;
+using HospitalSchedulerApplication.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -31,13 +31,14 @@ namespace HospitalSchedulerApplication.DataAccess.Repositories
             }
         }
 
-        public List<Schedule> GetAllSchedules()
+        public ScheduleList GetAllSchedules()
         {
             try
             {
                 string query = "select * from schedule;";
                 DataTable table = _dBCrudRepo.ExecuteQuery(query, fields);
-                return GetListFromDataTable(table);
+                List<Schedule> schedules = GetListFromDataTable(table);
+                return new ScheduleList() { schedules = schedules };
             }
             catch (Exception ex)
             {
@@ -52,11 +53,11 @@ namespace HospitalSchedulerApplication.DataAccess.Repositories
                 string query =  $"select * from schedule where scheduleId = {id};";
                 DataTable table = _dBCrudRepo.ExecuteQuery(query, fields);
                 List<Schedule> schedules = GetListFromDataTable(table);
-                return schedules.Count > 0 ? schedules.First() : null;
+                return schedules.Count > 0 ? schedules.First() : new Schedule() { ScheduleId = -1 };
             }
             catch (Exception ex)
             {
-                return null;
+                return new Schedule() { ScheduleId = -1};
             }
         }
 

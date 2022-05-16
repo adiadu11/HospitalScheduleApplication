@@ -15,8 +15,8 @@ namespace HospitalSchedulerApplication.DataAccess
         public MySqlCrudRepo()
         {
             //ToDo: Read this from configuration.
-            //_connectionString = "datasource=localhost;port=3306;username=root;password=PASS;database=hospital;";
-            _connectionString = "datasource=b1tbcsdqeoa5js5ykpeh-mysql.services.clever-cloud.com;port=3306;username=uemgs7eqsmjuiluq;password=sq03eJQHOmxmzrFGHRFS;database=b1tbcsdqeoa5js5ykpeh;";
+            _connectionString = "datasource=localhost;port=3306;username=root;password=PASS;database=hospital;";
+            //_connectionString = "datasource=b1tbcsdqeoa5js5ykpeh-mysql.services.clever-cloud.com;port=3306;username=uemgs7eqsmjuiluq;password=sq03eJQHOmxmzrFGHRFS;database=b1tbcsdqeoa5js5ykpeh;";
         }
         public int ExecuteQuery(string query)
         {
