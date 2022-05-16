@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalSchedulerApplication.Controllers
 {
+    //ToDo: Add validations and return Status codes in response.
+
     [Route("api/[controller]")]
     [ApiController]
     public class ScheduleController : ControllerBase

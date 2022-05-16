@@ -35,7 +35,7 @@ namespace HospitalSchedulerApplication.DataAccess.Repositories
         {
             try
             {
-                string query = "select * from schedule";
+                string query = "select * from schedule;";
                 DataTable table = _dBCrudRepo.ExecuteQuery(query, fields);
                 return GetListFromDataTable(table);
             }
@@ -47,12 +47,30 @@ namespace HospitalSchedulerApplication.DataAccess.Repositories
 
         public Schedule GetSchedule(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string query =  $"select * from schedule where scheduleId = {id};";
+                DataTable table = _dBCrudRepo.ExecuteQuery(query, fields);
+                List<Schedule> schedules = GetListFromDataTable(table);
+                return schedules.Count > 0 ? schedules.First() : null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
 
         public bool RemoveSchedule(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string query = $"delete from schedule where scheduleId = {id};";
+                return _dBCrudRepo.ExecuteQuery(query) > 0;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
         
         public Schedule UpdateSchedule(Schedule schedule)

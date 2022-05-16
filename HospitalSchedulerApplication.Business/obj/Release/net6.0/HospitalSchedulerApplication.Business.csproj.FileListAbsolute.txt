@@ -1,0 +1,17 @@
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\bin\Release\net6.0\HospitalSchedulerApplication.Business.deps.json
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\bin\Release\net6.0\HospitalSchedulerApplication.Business.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\bin\Release\net6.0\HospitalSchedulerApplication.Business.pdb
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\bin\Release\net6.0\HospitalSchedulerApplication.Abstract.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\bin\Release\net6.0\HospitalSchedulerApplication.Models.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\bin\Release\net6.0\HospitalSchedulerApplication.Abstract.pdb
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\bin\Release\net6.0\HospitalSchedulerApplication.Models.pdb
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\obj\Release\net6.0\HospitalSchedulerApplication.Business.csproj.AssemblyReference.cache
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\obj\Release\net6.0\HospitalSchedulerApplication.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\obj\Release\net6.0\HospitalSchedulerApplication.Business.AssemblyInfoInputs.cache
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\obj\Release\net6.0\HospitalSchedulerApplication.Business.AssemblyInfo.cs
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\obj\Release\net6.0\HospitalSchedulerApplication.Business.csproj.CoreCompileInputs.cache
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\obj\Release\net6.0\HospitalSchedulerApplication.Business.csproj.CopyComplete
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\obj\Release\net6.0\HospitalSchedulerApplication.Business.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\obj\Release\net6.0\refint\HospitalSchedulerApplication.Business.dll
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\obj\Release\net6.0\HospitalSchedulerApplication.Business.pdb
+C:\Users\Adi\source\repos\HospitalSchedulerApplication\HospitalSchedulerApplication.Business\obj\Release\net6.0\ref\HospitalSchedulerApplication.Business.dll

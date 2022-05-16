@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "OlmCHby43sS6mDsSMylKHsIHjrW/xCX7jE/SyxDidOI=",
+  "Source": "HospitalScheduleApplication",
+  "BasePath": "_content/HospitalScheduleApplication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

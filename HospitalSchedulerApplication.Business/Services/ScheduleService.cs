@@ -34,12 +34,16 @@ namespace HospitalSchedulerApplication.Business.Services
 
         public Schedule GetSchedule(int id)
         {
-            throw new NotImplementedException();
+            return _scheduleRepo.GetSchedule(id);
         }
 
         public int RemoveSchedule(int id)
         {
-            throw new NotImplementedException();
+            if (_scheduleRepo.RemoveSchedule(id))
+            {
+                return id;
+            }
+            return -1;
         }
 
         public Schedule UpdateSchedule(Schedule schedule)
