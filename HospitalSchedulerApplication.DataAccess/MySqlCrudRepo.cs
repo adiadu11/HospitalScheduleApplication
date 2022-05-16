@@ -15,23 +15,22 @@ namespace HospitalSchedulerApplication.DataAccess
         public MySqlCrudRepo()
         {
             //ToDo: Read this from configuration.
-            _connectionString = "datasource=localhost;port=3306;username=root;password=PASS;database=hospital;";
-            //_connectionString = "datasource=b1tbcsdqeoa5js5ykpeh-mysql.services.clever-cloud.com;port=3306;username=uemgs7eqsmjuiluq;password=sq03eJQHOmxmzrFGHRFS;database=b1tbcsdqeoa5js5ykpeh;";
+            //_connectionString = "datasource=localhost;port=3306;username=root;password=PASS;database=hospital;";
+            _connectionString = "datasource=b1tbcsdqeoa5js5ykpeh-mysql.services.clever-cloud.com;port=3306;username=uemgs7eqsmjuiluq;password=sq03eJQHOmxmzrFGHRFS;database=b1tbcsdqeoa5js5ykpeh;";
         }
-        public int ExecuteQuery(string query)
+        public async Task<int> ExecuteQuery(string query)
         {
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
                 //This is command class which will handle the query and connection object.
                 MySqlCommand command = new MySqlCommand(query, connection);
-                
                 connection.Open();
-                int rowsAffected = command.ExecuteNonQuery();
+                int rowsAffected = await command.ExecuteNonQueryAsync();
                 connection.Close();
                 return rowsAffected;
             }
         }
-        public DataTable ExecuteQuery(string query, string[] fields)
+        public async Task<DataTable> ExecuteQuery(string query, string[] fields)
         {
             DataTable table = new DataTable();
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
@@ -43,9 +42,9 @@ namespace HospitalSchedulerApplication.DataAccess
                 {
                     table.Columns.Add(fields[i]);
                 }
-                using (MySqlDataReader reader = command.ExecuteReader())
+                using (var reader = await command.ExecuteReaderAsync())
                 {
-                    while (reader.Read())
+                    while (await reader.ReadAsync())
                     {
                         DataRow row = table.NewRow();
                         for (int i = 0; i < fields.Length; i++)

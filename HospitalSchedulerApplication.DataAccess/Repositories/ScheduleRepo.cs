@@ -18,12 +18,12 @@ namespace HospitalSchedulerApplication.DataAccess.Repositories
             _dBCrudRepo = dBCrudRepo;
             fields = new string[] { "scheduleId", "dutyName", "employeeName", "dateOfDuty" };
         }
-        public bool AddSchedule(Schedule schedule)
+        public async Task<bool> AddSchedule(Schedule schedule)
         {
             try
             {
                 string query = "insert into schedule (dutyName, employeeName, dateOfDuty) values('" + schedule.DutyName + "','" + schedule.EmployeeName + "','" + schedule.DateOfDuty.ToString("yyyy-MM-dd") + "');";
-                return _dBCrudRepo.ExecuteQuery(query) > 0;
+                return await _dBCrudRepo.ExecuteQuery(query) > 0;
             }
             catch (Exception ex)
             {
@@ -31,12 +31,12 @@ namespace HospitalSchedulerApplication.DataAccess.Repositories
             }
         }
 
-        public ScheduleList GetAllSchedules()
+        public async Task<ScheduleList> GetAllSchedules()
         {
             try
             {
                 string query = "select * from schedule;";
-                DataTable table = _dBCrudRepo.ExecuteQuery(query, fields);
+                DataTable table = await _dBCrudRepo.ExecuteQuery(query, fields);
                 List<Schedule> schedules = GetListFromDataTable(table);
                 return new ScheduleList() { schedules = schedules };
             }
@@ -46,12 +46,12 @@ namespace HospitalSchedulerApplication.DataAccess.Repositories
             }
         }
 
-        public Schedule GetSchedule(int id)
+        public async Task<Schedule> GetSchedule(int id)
         {
             try
             {
                 string query =  $"select * from schedule where scheduleId = {id};";
-                DataTable table = _dBCrudRepo.ExecuteQuery(query, fields);
+                DataTable table = await _dBCrudRepo.ExecuteQuery(query, fields);
                 List<Schedule> schedules = GetListFromDataTable(table);
                 return schedules.Count > 0 ? schedules.First() : new Schedule() { ScheduleId = -1 };
             }
@@ -61,20 +61,33 @@ namespace HospitalSchedulerApplication.DataAccess.Repositories
             }
         }
 
-        public bool RemoveSchedule(int id)
+        public async Task<bool> RemoveSchedule(int id)
         {
             try
             {
                 string query = $"delete from schedule where scheduleId = {id};";
-                return _dBCrudRepo.ExecuteQuery(query) > 0;
+                return await _dBCrudRepo.ExecuteQuery(query) > 0;
             }
             catch (Exception ex)
             {
                 return false;
             }
         }
-        
-        public Schedule UpdateSchedule(Schedule schedule)
+
+        public async Task<int> RemoveSchedule(DateTime date)
+        {
+            try
+            {
+                string query = $"delete from schedule where dateOfDuty = '{date.ToString("yyyy-MM-dd")}';";
+                return await _dBCrudRepo.ExecuteQuery(query);
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+
+        public Task<Schedule> UpdateSchedule(Schedule schedule)
         {
             throw new NotImplementedException();
         }

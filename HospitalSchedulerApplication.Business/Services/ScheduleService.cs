@@ -16,9 +16,9 @@ namespace HospitalSchedulerApplication.Business.Services
         {
             _scheduleRepo = scheduleRepo;
         }
-        public Schedule AddSchedule(Schedule schedule)
+        public async Task<Schedule> AddSchedule(Schedule schedule)
         {
-            if(_scheduleRepo.AddSchedule(schedule))
+            if(await _scheduleRepo.AddSchedule(schedule))
             {
                 //ToDo: Return the inserted schedule row with correct
                 //schedule ID instead of the request model received.
@@ -27,26 +27,31 @@ namespace HospitalSchedulerApplication.Business.Services
             return new Schedule() { ScheduleId = -1};
         }
 
-        public ScheduleList GetAllSchedules()
+        public async Task<ScheduleList> GetAllSchedules()
         {
-            return _scheduleRepo.GetAllSchedules();
+            return await _scheduleRepo.GetAllSchedules();
         }
 
-        public Schedule GetSchedule(int id)
+        public async Task<Schedule> GetSchedule(int id)
         {
-            return _scheduleRepo.GetSchedule(id);
+            return await _scheduleRepo.GetSchedule(id);
         }
 
-        public int RemoveSchedule(int id)
+        public async Task<int> RemoveSchedule(int id)
         {
-            if (_scheduleRepo.RemoveSchedule(id))
+            if (await _scheduleRepo.RemoveSchedule(id))
             {
                 return id;
             }
             return -1;
         }
 
-        public Schedule UpdateSchedule(Schedule schedule)
+        public async Task<int> RemoveSchedule(DateTime date)
+        {
+            return await _scheduleRepo.RemoveSchedule(date);
+        }
+
+        public Task<Schedule> UpdateSchedule(Schedule schedule)
         {
             throw new NotImplementedException();
         }

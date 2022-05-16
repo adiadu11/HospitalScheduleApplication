@@ -9,7 +9,7 @@ namespace HospitalSchedulerApplication.Abstract.DataAccessInterfaces
 {
     public interface IDBCrudRepo
     {
-        int ExecuteQuery(string query);
-        DataTable ExecuteQuery(string query, string[] fields);
+        Task<int> ExecuteQuery(string query);
+        Task<DataTable> ExecuteQuery(string query, string[] fields);
     }
 }
